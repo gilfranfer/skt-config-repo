@@ -1,0 +1,22 @@
+db:
+  driver: com.mysql.jdbc.Driver
+  url: 'jdbc:mysql://127.0.0.1:3308/products_dev?verifyServerCertificate=false&useSSL=false&requireSSL=false'
+  user: root
+  pwd: root_pwd
+rabbit:
+  host: localhost
+  virtualhost: /
+  port: 5699
+  username: guest
+  password: guest
+  exchange: rabbitmq.exchange
+  queue:
+    newProducts: skt.products
+  routingKey: productDto.new.routing
+  reply:
+    timeout: 60000
+  concurrent:
+    consumers: 1
+  max:
+    concurrent:
+      consumers: 1
