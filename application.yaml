@@ -11,8 +11,13 @@ rabbit:
   password: guest
   exchange: rabbitmq.exchange
   queue:
-    newProducts: skt.products
-  routingKey: productDto.new.routing
+    products: 
+      new: skt.products.new
+      list: skt.products.list
+  routing:
+    products: 
+      new: skt.products.new
+      list: skt.products.list
   reply:
     timeout: 60000
   concurrent:
