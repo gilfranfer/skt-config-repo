@@ -14,6 +14,7 @@ rabbit:
     products: 
       new: skt.products.new
       list: skt.products.list
+      created: skt.products.created
   routing:
     products: 
       new: skt.products.new
